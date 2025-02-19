@@ -5,37 +5,35 @@ import YourPasswords from "@/components/YourPasswords"
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Dashboard</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Add New</h2>
-          <div className="space-y-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Add a credit card</h3>
-              <AddCard />
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Add a password</h3>
-              <AddPassword />
-            </div>
-          </div>
-        </section>
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Your Items</h2>
-          <div className="space-y-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Your cards</h3>
-              <YourCards />
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Your passwords</h3>
-              <YourPasswords />
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+    <div className="min-h-screen bg-gray-100">
+      <header className="bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-4">
+          <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
+        </div>
+      </header>
+      <main className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <section className="bg-white p-6 rounded-lg shadow-sm">
+            <h2 className="text-xl font-semibold mb-4">Add Credit Card</h2>
+            <AddCard />
+          </section>
+          <section className="bg-white p-6 rounded-lg shadow-sm">
+            <h2 className="text-xl font-semibold mb-4">Your Cards</h2>
+            <YourCards />
+          </section>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <section className="bg-white p-6 rounded-lg shadow-sm">
+            <h2 className="text-xl font-semibold mb-4">Add Password</h2>
+            <AddPassword />
+          </section>
+          <section className="bg-white p-6 rounded-lg shadow-sm">
+            <h2 className="text-xl font-semibold mb-4">Your Passwords</h2>
+            <YourPasswords />
+          </section>
+        </div>
+      </main>
+    </div>
   )
 }
 

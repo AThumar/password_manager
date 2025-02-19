@@ -36,7 +36,9 @@ export default function AddPassword() {
         <Label htmlFor="password">Password</Label>
         <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
       </div>
-      <Button type="submit">Add Password</Button>
+      <Button type="submit" className="w-full">
+        Add Password
+      </Button>
     </form>
   )
 }
