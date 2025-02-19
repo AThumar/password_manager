@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { SignInButton } from "@clerk/nextjs";
+//import { Button } from "@/components/ui/button";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import React from "react";
 
 const Navbar = () => {
@@ -14,9 +14,12 @@ const Navbar = () => {
       </ul>
 
       <div className="w-1/3 flex justify-end">
-        <Button asChild variant={"secondary"}>
+        <SignedOut>
           <SignInButton />
-        </Button>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </nav>
   );
