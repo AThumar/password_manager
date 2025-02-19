@@ -1,7 +1,6 @@
 //import { Button } from "@/components/ui/button";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import React from "react";
-
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between h-16 bg-purple-600 text-white px-6">
