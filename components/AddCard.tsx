@@ -162,6 +162,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { addCardServer } from "@/actions/actions";
 import { useUser } from "@clerk/nextjs";
+import toast from "react-hot-toast";
 const formSchema = z.object({
   cardNumber: z
     .string()
@@ -219,6 +220,7 @@ export default function AddCard() {
         values.cvv,
         user?.user?.id
       );
+      toast.success("Card added successfully");
     }
   }
 
