@@ -221,6 +221,7 @@ export default function AddCard() {
         user?.user?.id
       );
       toast.success("Card added successfully");
+      form.reset();
     }
   }
 
